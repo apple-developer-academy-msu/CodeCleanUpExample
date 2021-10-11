@@ -11,7 +11,7 @@ import SwiftUI
 struct CodeCleanUpExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CleanedUpGroceryView()
         }
     }
 }
