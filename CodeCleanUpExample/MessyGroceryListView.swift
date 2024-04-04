@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct MessyGroceryListView: View {
-    @State private var hasPurchasedPizzaCrust = false
-    @State private var hasPurchasedRottenApples = false
-    @State private var hasPurchasedSpoiledMilk = false
-    @State private var hasPurchasedGummyRats = false
-    @State private var hasPurchasedRawMeatSmoothie = false
+    @State private var HasPurchasedPizzaCrust = false
+    @State private var HAS_PURCHASED_ROTTEN_APPLES = false
+    @State private var haspurchasedspoiledmilk = false
+    @State private var has_purchased_gummy_rats = false
+    @State private var boolHasPurchasedRawMeatSmoothie = false
     @State private var hasPurchasedSweatyMeatballs = false
     @State private var hasPurchasedShrimp = false
     @State private var hasPurchasedMayonaiseMilkshake = false
     @State private var hasPurchasedChocolate = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
         VStack {
         Image("Oscarthegrouchy").resizable().scaledToFill()
         List {
         HStack {
         Button(action: {
-             hasPurchasedPizzaCrust.toggle()
+            HasPurchasedPizzaCrust.toggle()
         }, label: {
             HStack {
-                if hasPurchasedPizzaCrust {
+                if HasPurchasedPizzaCrust {
                     Image(systemName: "checkmark.square")
                 } else {
                     Image(systemName: "square")
@@ -43,10 +43,10 @@ struct MessyGroceryListView: View {
 
         HStack {
             Button(action: {
-                hasPurchasedRottenApples.toggle()
+                HAS_PURCHASED_ROTTEN_APPLES.toggle()
             }, label: {
             HStack {
-                if hasPurchasedRottenApples {
+                if HAS_PURCHASED_ROTTEN_APPLES {
                     Image(systemName: "checkmark.square")
                 } else {
                     Image(systemName: "square")
@@ -61,10 +61,10 @@ struct MessyGroceryListView: View {
         
         HStack {
             Button(action: {
-                hasPurchasedSpoiledMilk.toggle()
+                haspurchasedspoiledmilk.toggle()
             }, label: {
                 HStack {
-                    if hasPurchasedSpoiledMilk {
+                    if haspurchasedspoiledmilk {
                         Image(systemName: "checkmark.square")
                     } else {
                         Image(systemName: "square")
@@ -79,10 +79,10 @@ struct MessyGroceryListView: View {
         
         HStack {
             Button(action: {
-                hasPurchasedGummyRats.toggle()
+                has_purchased_gummy_rats.toggle()
             }, label: {
                 HStack {
-                    if hasPurchasedGummyRats {
+                    if has_purchased_gummy_rats {
                         Image(systemName: "checkmark.square")
                     } else {
                         Image(systemName: "square")
@@ -97,10 +97,10 @@ struct MessyGroceryListView: View {
         
         HStack {
             Button(action: {
-                hasPurchasedRawMeatSmoothie.toggle()
+                boolHasPurchasedRawMeatSmoothie.toggle()
             }, label: {
                 HStack {
-                    if hasPurchasedRawMeatSmoothie {
+                    if boolHasPurchasedRawMeatSmoothie {
                         Image(systemName: "checkmark.square")
                     } else {
                         Image(systemName: "square")
@@ -197,9 +197,6 @@ struct MessyGroceryListView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessyGroceryListView()
-            .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
-    }
+#Preview {
+    MessyGroceryListView()
 }

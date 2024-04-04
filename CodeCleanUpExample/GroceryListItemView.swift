@@ -20,11 +20,11 @@ struct GroceryListItemView: View {
             Button(action: {
                 isSelected.toggle()
             }, label: {
-            HStack {
-                Image(systemName: imageName)
-                Text(listItemText)
-            }
-            .font(.body)
+                HStack {
+                    Image(systemName: imageName)
+                    Text(listItemText)
+                }
+                .font(.body)
             })
         }
         .listRowBackground(Color.green)
@@ -39,8 +39,6 @@ struct GroceryListItemView: View {
     }
 }
 
-struct GroceryListItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        GroceryListItemView(listItemText: "Milk")
-    }
+#Preview {
+    GroceryListItemView( listItemText: "Milk")
 }
